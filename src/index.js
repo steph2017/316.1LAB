@@ -20,3 +20,10 @@ topMenuEl.style.height = "100%"; //set menu height to 100%
 topMenuEl.style.backgroundColor = "var(--top-menu-bg)"; //set bg color
 topMenuEl.classList.add("flex-around"); // add class
 //not sure why the nav element looks different here than on the progress check.
+
+menuLinks.forEach((link) => {
+  const anchor = document.createElement("a");
+  anchor.setAttribute("href", link.href);
+  anchor.textContent = link.text;
+  topMenuEl.appendChild(anchor);
+});
